@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
 import { useRef, useState, useEffect } from 'react';
-import { SIGNATURE_IMAGE, HOTSPOTS } from '../data';
+import { SIGNATURE_IMAGE, SIGNATURE_FALLBACK, HOTSPOTS } from '../data';
 import { Info, Plus, Compass } from 'lucide-react';
 
 export default function HeroDetailSection() {
@@ -59,6 +59,10 @@ export default function HeroDetailSection() {
         <div className="relative lg:col-span-8 aspect-[16/10] md:aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl border border-white/10 mx-auto w-full group bg-zinc-950">
           <img
             src={SIGNATURE_IMAGE}
+            onError={(e) => {
+              e.currentTarget.onerror = null;
+              e.currentTarget.src = SIGNATURE_FALLBACK;
+            }}
             alt="Signature Shoot"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000 ease-out"

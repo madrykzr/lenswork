@@ -97,6 +97,12 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
               <div className="relative aspect-[4/5] md:aspect-auto md:h-64 rounded-xl overflow-hidden bg-zinc-900">
                 <img
                   src={chip.imageUrl}
+                  onError={(e) => {
+                    if (chip.fallbackUrl) {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = chip.fallbackUrl;
+                    }
+                  }}
                   alt={chip.title}
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"

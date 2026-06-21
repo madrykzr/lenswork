@@ -111,6 +111,12 @@ export default function ScatteredStackSection() {
                 <div className="relative w-full flex-grow overflow-hidden rounded-lg bg-zinc-900 aspect-[3/4]">
                   <img
                     src={photo.imageUrl}
+                    onError={(e) => {
+                      if (photo.fallbackUrl) {
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = photo.fallbackUrl;
+                      }
+                    }}
                     alt={photo.title}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover grayscale brightness-95"

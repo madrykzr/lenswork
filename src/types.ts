@@ -3,6 +3,7 @@ export interface PhotographySample {
   title: string;
   category: string;
   imageUrl: string;
+  fallbackUrl?: string;
   gridSpan?: string; // Tailwind grid span classes
   rotation?: string; // Rotation class (e.g. rotate-3)
   offsetClass?: string; // Offset class (e.g. -translate-y-4)
@@ -24,6 +25,7 @@ export interface ScatteredPhoto {
   id: string;
   title: string;
   imageUrl: string;
+  fallbackUrl?: string;
   caption: string;
   rotateDeg: number;
   translateX: number;
@@ -35,6 +37,7 @@ export interface PortfolioGridItem {
   title: string;
   category: string;
   imageUrl: string;
+  fallbackUrl?: string;
   spec: string; // e.g. "45 min / Studio"
   location: string;
   year: string;
@@ -50,5 +53,6 @@ export interface PastProject {
   location: string;
   imagesDelivered: number;
   imageUrl: string;
+  fallbackUrl?: string;
   year: string;
 }

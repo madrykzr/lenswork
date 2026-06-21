@@ -77,6 +77,12 @@ export default function ProjectListSection() {
                   >
                     <img
                       src={project.imageUrl}
+                      onError={(e) => {
+                        if (project.fallbackUrl) {
+                          e.currentTarget.onerror = null;
+                          e.currentTarget.src = project.fallbackUrl;
+                        }
+                      }}
                       alt={project.clientName}
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700 brightness-90 grayscale"

@@ -50,6 +50,12 @@ export default function PortfolioGridSection({ onContactClick }: PortfolioGridSe
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-[#0E0F0E]">
                 <img
                   src={item.imageUrl}
+                  onError={(e) => {
+                    if (item.fallbackUrl) {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = item.fallbackUrl;
+                    }
+                  }}
                   alt={item.title}
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95"
