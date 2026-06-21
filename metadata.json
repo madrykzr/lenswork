@@ -1,0 +1,6 @@
+{
+  "name": "LENSWORK Studio Portfolio",
+  "description": "An editorial, oversized-typography, scroll-driven portfolio for LENSWORK photography studio featuring immersive galleries, interactive hotspots, and fluid scroll animations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

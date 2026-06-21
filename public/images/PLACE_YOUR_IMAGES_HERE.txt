@@ -1,0 +1,16 @@
+# Photography Studio Asset Directory
+
+You can upload your own photography assets directly to this folder (`/public/images/`) via the file explorer.
+
+Once uploaded, you can reference them directly in your code (e.g., in `/src/data.ts`) using the root path:
+`/images/your_filename.jpg`
+
+## Suggested Assets:
+1. `portrait_bento_1.jpg` (Fashion Editorial)
+2. `architecture_bento_2.jpg` (Brutalist Architecture)
+3. `product_bento_4.jpg` (Still Life Product)
+4. `portrait_bento_5.jpg` (Portrait Study)
+5. `signature_hero.jpg` (Main Full-Bleed Hotspot composition)
+6. `scattered_1.jpg` to `scattered_4.jpg` (Scattered stack prints)
+7. `port_1.jpg` to `port_6.jpg` (Portfolio showcase grid images)
+8. `past_1.jpg` to `past_4.jpg` (Past projects hover-zoom slides)
